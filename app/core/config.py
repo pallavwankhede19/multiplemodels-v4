@@ -16,6 +16,8 @@ class Settings:
     FRONTEND_DIR = os.path.join(BASE_DIR, "frontend")
     STATIC_DIR = os.path.join(FRONTEND_DIR, "static")
     
+    
+    
     # App settings
     MIN_CONFIDENCE = float(os.getenv("MIN_CONFIDENCE", "0.70"))
     
