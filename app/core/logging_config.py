@@ -20,4 +20,4 @@ def setup_logging():
     logging.getLogger("uvicorn").setLevel(logging.INFO)
     logging.getLogger("fastapi").setLevel(logging.INFO)
 
-logger = logging.getLogger("samagra")
+logger = logging.getLogger("ai_assistance")

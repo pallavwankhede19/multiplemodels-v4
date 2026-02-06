@@ -1,5 +1,5 @@
 /**
- * Samagra Motor Layer (Stage P9 & P10) — FIXED REALTIME VERSION
+ * Ai Assistance Powered By The Baap Company Motor Layer (Stage P9 & P10) — FIXED REALTIME VERSION
  * Stable Input + Proper Interrupt + Backend Commit Control
  */
 
