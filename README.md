@@ -1,12 +1,12 @@
-# Samagra: Real-Time Multilingual AI Voice Assistant
+# Ai Assistance Powered By The Baap Company: Real-Time Multilingual AI Voice Assistant
 
-**Samagra** (समग्र - *Complete, Unified*) is a premium, ultra-low-latency AI Voice Assistant designed to be a warm, human-like companion. It speaks **English**, **Hindi**, and **Marathi** with deep emotional intelligence and real-time situational awareness.
+**Ai Assistance Powered By The Baap Company** is a premium, ultra-low-latency AI Voice Assistant designed to be a warm, human-like companion. It speaks **English**, **Hindi**, and **Marathi** with deep emotional intelligence and real-time situational awareness.
 
 ---
 
-## ✨ Features: The "Jarvis" Experience
+## ✨ Features: The Premium Experience
 
-**Samagra** is designed for a natural, face-to-face conversational feel, moving beyond standard command-response bots.
+**Ai Assistance Powered By The Baap Company** is designed for a natural, face-to-face conversational feel, moving beyond standard command-response bots.
 
 *   **🎙️ Smart Barge-In**: Interrupt the AI naturally at any time. Using a sophisticated dual-threshold VAD (Neural Ear), the AI instantly stops speaking the moment it hears your voice and begins listening to your next thought.
 *   **🧠 Adaptive VAD (Neural Ear)**: 
@@ -15,7 +15,7 @@
 *   **🔒 Strict Language Lock**: An advanced multi-layer enforcement system. If you select Hindi, the AI is cryptographically locked to **Devanagari script only**, rejecting any English words to maintain 100% immersion.
 *   **🔮 Three.js Living Orb**: A high-performance 3D visual heart that pulses with life. It changes color and scale dynamically based on its state: **Blue (Idle)**, **Red (Listening)**, and **Green (Speaking)**.
 *   **💬 Floating Smart Chat**: A non-intrusive, collapsible side-corner chatbox with persistence-aware notifications (red dot pulse) if the AI responds while hidden.
-*   **🧠 Situational Intelligence**: Powered by **Gemini 2.0 Flash**, Samagra handles complex multi-turn conversations while maintaining a consistent "Samagra" persona.
+*   **🧠 Situational Intelligence**: Powered by **Gemini 2.0 Flash**, Ai Assistance Powered By The Baap Company handles complex multi-turn conversations while maintaining a consistent persona.
 *   **🌐 Real-Time Grounding**: Integrated Google Search for the latest news, incidents, and facts, ensuring it never hallucinates current events.
 *   **🎭 Emotional Resonance**: Automatically adapts its tone and script based on your sentiment—sharing joy, comfort, or enthusiasm.
 
@@ -67,7 +67,7 @@ The system operates on an high-performance orchestration pipeline:
 ├── .env                 # Environment Configuration (Local/Prod)
 ├── .gitignore           # File Exclusions (Models, Venv, Logs)
 ├── run.py               # Main Entry Point
-└── requirements.txt     # Python Dependencies
+├── requirements.txt     # Python Dependencies
 ```
 
 ---

@@ -18,7 +18,7 @@ from app.services.vad_service import voice_detector
 os.environ["SSL_CERT_FILE"] = certifi.where()
 
 # ---------------- APP ----------------
-app = FastAPI(title="Samagra lead real-time conversation")
+app = FastAPI(title="Ai Assistance Powered By The Baap Company lead real-time conversation")
 
 app.add_middleware(
     CORSMiddleware,
@@ -34,7 +34,7 @@ chat_history = deque(maxlen=10)
 @app.on_event("startup")
 async def startup_event():
     setup_logging()
-    logger.info("🚀 Starting Samagra Orchestrator...")
+    logger.info("🚀 Starting Ai Assistance Powered By The Baap Company Orchestrator...")
     await init_tts_pools()
     logger.info("✅ TTS Pools & Gemini Ready")
 
@@ -120,7 +120,7 @@ async def stream_chat(req: TextRequest):
                 elif LOCKED_LANGUAGE == "mr":
                     lang_rule = "तुम्हाला फक्त मराठीतच बोलायचे आहे। पूर्णपणे देवनागरी लिपी वापरा। इंग्रजी किंवा हिंदी शब्द वापरू नका। (Respond 100% in Marathi Devanagari)."
 
-                sys_prompt = f"""You are Samagra, a human-like AI friend. Current Time: {current_time}.
+                sys_prompt = f"""You are Ai Assistance Powered By The Baap Company, a human-like AI friend. Current Time: {current_time}.
 Never use emojis. Keep it punchy, witty & very warm (10-15 words max).
 
 CONTEXT HISTORY:
@@ -182,7 +182,7 @@ AGENT:"""
                         # Only add User if not last
                         if not chat_history or chat_history[-1]["role"] != "User": 
                              chat_history.append({"role": "User", "text": normalized_user_text, "lang": LOCKED_LANGUAGE})
-                        chat_history.append({"role": "Samagra", "text": full_text.strip(), "lang": LOCKED_LANGUAGE})
+                        chat_history.append({"role": "Ai Assistance Powered By The Baap Company", "text": full_text.strip(), "lang": LOCKED_LANGUAGE})
                         print(f" MEMORY SAVED [{LOCKED_LANGUAGE.upper()}]: {full_text.strip()[:40]}...")
 
             except Exception as e:
