@@ -1,0 +1,12 @@
+fastapi
+uvicorn
+pydantic
+google-genai
+certifi
+webrtcvad
+python-multipart
+websockets
+httpx
+numpy
+piper-tts
+python-dotenv

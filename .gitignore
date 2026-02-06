@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+venv/
+ENV/
+.env
+
+# Models (Requested)
+models/*.onnx
+models/*.json
+
+# Logs
+logs/
+*.log
+debug_log.txt
+debug_ngrok.txt
+
+# Temporary files
+temp/
+.DS_Store
+Thumbs.db

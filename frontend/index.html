@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#050507">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Samagra AI | Real-Time Conversation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.160.0/three.min.js"></script>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/chat-solar.css">
+    <style>
+        /* Samagra Custom Clean HUD */
+        .status-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .live-indicator {
+            width: 8px;
+            height: 8px;
+            background: #00ff88;
+            border-radius: 50%;
+            box-shadow: 0 0 10px #00ff88;
+            animation: pulse-green 2s infinite;
+        }
+
+        @keyframes pulse-green {
+            0% {
+                opacity: 0.4;
+            }
+
+            50% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0.4;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg-surface">
+        <canvas id="threeCanvas"></canvas>
+    </div>
+
+    <div class="app-shell">
+        <header class="minimal-header">
+            <div class="nav-actions">
+                <div class="brand">Samagra<span>.ai</span></div>
+                <div class="lang-switcher">
+                    <span class="lang-opt active" data-lang="en">EN</span>
+                    <span class="lang-opt" data-lang="hi">HI</span>
+                    <span class="lang-opt" data-lang="mr">MR</span>
+                </div>
+            </div>
+            <div class="header-right">
+                <button id="muteButton" class="text-btn" style="margin-right: 12px;">🎤 Mute</button>
+                <button id="terminateButton" class="text-btn danger">Reset Session</button>
+                <div class="status-container">
+                    <div class="live-indicator"></div>
+                    <div id="statusLabel" class="status-label">Tap to Start</div>
+                </div>
+            </div>
+        </header>
+
+        <main class="center-stage">
+            <!-- Solar System Background -->
+            <div class="ai-presence-container">
+                <div class="solar-orb"></div>
+            </div>
+
+            <!-- Chat Container at Side Corner -->
+            <div class="chat-container-wrapper" id="chatWrapper">
+                <div class="chat-toggle-btn" id="chatToggleBtn">
+                    <svg viewBox="0 0 24 24" width="24" height="24">
+                        <path fill="currentColor"
+                            d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z" />
+                    </svg>
+                </div>
+                <div class="chat-container" id="chatContainer">
+                    <div class="chat-header">
+                        <div class="chat-title">Conversation</div>
+                        <button class="chat-close-btn" id="chatCloseBtn">&minus;</button>
+                    </div>
+                    <div class="chat-messages" id="chatMessages">
+                        <!-- Chat bubbles will appear here -->
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="interaction-footer">
+            <div class="console-box">
+                <div class="input-wrapper">
+                    <input type="text" id="textInput" placeholder="Speak naturally or type here..." autocomplete="off">
+                    <button id="sendButton" class="send-btn">
+                        <svg viewBox="0 0 24 24" width="22" height="22">
+                            <path fill="currentColor" d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Samagra Motor Core -->
+    <script src="/static/js/audio_engine.js?v=0204_LEAD"></script>
+</body>
+
+</html>
